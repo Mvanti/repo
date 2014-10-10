@@ -9,9 +9,11 @@ import desenha_malha as ds
 import matplotlib.pyplot as plt
 
 try:
-    infilename1=sys.argv[1]
+    infilename=sys.argv[1]
 except:
     print "Usage:", sys.argv[0], "infile"; sys.exit(1)
+
+infilename1=infilename+".malha"
 
 #arquivo .malha
 m = ds.Mesh(infilename1)
