@@ -10,9 +10,12 @@ import matplotlib.tri as tri
 import matplotlib.pyplot as plt
 
 try:
-    infilename1=sys.argv[1];infilename2=sys.argv[2]
+    infilename=sys.argv[1]
 except:
-    print "Usage:", sys.argv[0], "infile outfile"; sys.exit(1)
+    print "Usage:", sys.argv[0], "infile"; sys.exit(1)
+
+infilename1=infilename+".malha"
+infilename2=infilename+".resu"
 
 #arquivo .malha
 m = ds.Mesh(infilename1)
